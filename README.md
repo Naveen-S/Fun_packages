@@ -49,3 +49,25 @@ output:
         console.log('The solution is: ', results[0].solution);
         });
         
+  ##### Efficient INSERT queries through node
+        
+        var person = {
+            email: faker.internet.email(),
+            created_at: faker.date.past()
+        };
+
+        var end_result = connection.query('INSERT INTO users SET ?', person, function(err, result) {
+            if (err) throw err;
+            console.log(result);
+        });
+        
+        mysqljs package automatically convert the query into correct MYSQL query and then excuted in mysql server.
+        
+   SIDENOTE: Even below code is perfectly correct.
+            
+            var q = 'INSERT INTO users (email) VALUES ("rusty_the_dog@gmail.com")';
+
+            connection.query(q, function (error, results, fields) {
+            if (error) throw error;
+            console.log(results);
+            });
