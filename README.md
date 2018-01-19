@@ -61,9 +61,11 @@ output:
             console.log(result);
         });
         
-        mysqljs package automatically convert the query into correct MYSQL query and then excuted in mysql server.
+        Mysql(mysqljs) package automatically convert the query into correct MYSQL query and then excuted
+        in mysql server.
         
-   SIDENOTE: Even below code is perfectly correct.
+  
+  SIDENOTE: Even below code is perfectly correct.
             
             var q = 'INSERT INTO users (email) VALUES ("rusty_the_dog@gmail.com")';
 
