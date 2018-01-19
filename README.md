@@ -27,7 +27,8 @@ output:
 
 
 ### MYSQL
-
+  https://github.com/mysqljs/mysql
+  
   To include in your package:
         
           npm install mysql
