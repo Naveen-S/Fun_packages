@@ -23,3 +23,28 @@ output:
         850 Oberbrunner Burgs
         South Schuylerton
         Florida
+
+
+
+### MYSQL
+
+  To include in your package:
+        
+          npm install mysql
+   
+   Initial setup and test query:
+        
+        var mysql = require('mysql');
+
+        var connection = mysql.createConnection({
+        host     : 'localhost',
+        user     : 'naveen',  //your username
+        database : 'join_us'         //the name of your db
+        //password : "if necessary"
+        });
+        
+        connection.query('SELECT 1 + 1 AS solution', function (error, results, fields) {
+        if (error) throw error;
+        console.log('The solution is: ', results[0].solution);
+        });
+        
